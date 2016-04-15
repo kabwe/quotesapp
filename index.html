@@ -36,14 +36,7 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
-    <!-- Material Design Lite page styles:
-    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
-    Format: material.color1-color2.min.css, some examples:
-    material.red-teal.min.css
-    material.blue-orange.min.css
-    material.purple-indigo.min.css
-    -->
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="mdl/material.min.css">
 
     <!-- Material Design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -195,6 +188,48 @@
                 <a href="#lorem2">Small & Medium Sized (SME)</a>
               </ul>
             </div>
+            <form action="#">
+              <h5>About The Loan</h5>
+              <br>
+              <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                <label class="mdl-textfield__label" for="sample5">What will you use the loan for...</label>
+              </div>
+              <br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <label class="mdl-textfield__label" for="sample4">How much would you like to borrow (ZMW)...</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+              <br>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">How long do you want to borrow it for...</label>
+              </div>
+              <h5>About You</h5>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Fullname...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Email address...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">ID number...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <label class="mdl-textfield__label" for="sample4">Mobile number...</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+              <div class="">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Submit
+                </button>
+              </div>
+            </form>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="insurance">
@@ -208,6 +243,47 @@
                 <a href="#lorem2">Property</a>
                 <a href="#lorem3">Miscellaneous Accident</a>
               </ul>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+              <form action="#">
+                <h5>Your Car</h5>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="motor-year">
+                  <label class="mdl-textfield__label" for="sample4">Year...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="motor-make">
+                  <label class="mdl-textfield__label" for="sample3">Make...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="motor-model">
+                  <label class="mdl-textfield__label" for="sample3">Model...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="motor-description">
+                  <label class="mdl-textfield__label" for="sample3">Description...</label>
+                </div>
+                <h5>Driver Details</h5>
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                  <span class="mdl-radio__label">I am the regular driver</span>
+                </label>
+                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                  <span class="mdl-radio__label">Someone else</span>
+                </label>
+                <h5>More About Your Car</h5>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="motor-cover">
+                  <label class="mdl-textfield__label" for="sample3">What type of cover do you require...</label>
+                </div>
+                <div class="">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </section>
         </div>
@@ -266,7 +342,7 @@
       </main>
     </div>
 
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="mdl/material.min.js"></script>
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
