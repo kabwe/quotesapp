@@ -70,26 +70,18 @@
             </li>
             <li class="drop">Medical
               <ul>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
-              </ul>
-            </li>
-            <li class="drop">Home
-              <ul>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
+                <li><a href="#" class="mdl-layout__tab">Life Insurance</a></li>
+                <li><a href="#" class="mdl-layout__tab">Medical Aid</a></li>
               </ul>
             </li>
             <li class="drop">Travel
               <ul>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
+                <li><a href="#" class="mdl-layout__tab">Travel Insurance</a></li>
               </ul>
             </li>
             <li class="drop">Business
               <ul>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
-                <li><a href="#" class="mdl-layout__tab">-</a></li>
+                <li><a href="#" class="mdl-layout__tab">Business Insurance</a></li>
               </ul>
             </li>
           </ul>
@@ -159,6 +151,8 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul> -->
           </section>
+
+          <!-- Partners -->
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text">
@@ -178,6 +172,8 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul> -->
           </section>
+
+          <!-- Advertisements -->
           <section class="section--footer mdl-color--white mdl-grid">
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
               <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
@@ -195,20 +191,6 @@
             </div>
           </section>
         </div>
-
-        <!-- <div class="mdl-layout__tab-panel" id="investments">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Investments</h4>
-              Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-              <ul class="toc">
-                <h4>Products</h4>
-                <a href="#lorem1">Classic Investment</a>
-                <a href="#lorem2">Swiftsave Investment</a>
-              </ul>
-            </div>
-          </section>
-        </div> -->
 
         <div class="mdl-layout__tab-panel" id="finance-personal">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
@@ -263,6 +245,68 @@
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
                 <label class="mdl-textfield__label" for="sample4">Total Monthly Expenses</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+              <div class="">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submit-margin">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <div class="mdl-layout__tab-panel" id="finance-vehicle">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+
+            <form action="#">
+              <h4>Get Quotes to Refinance Your Vehicle</h4>
+              <br>
+              <h5>Tell Us What You Need</h5>
+              <h6>Is your vehicle a 2003 year model or newer?</h6>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                <span class="mdl-radio__label">Yes</span>
+              </label>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" checked>
+                <span class="mdl-radio__label">No</span>
+              </label>
+              <h6>Was your vehicle stolen and recovered or rebuilt?</h6>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                <input type="radio" id="option-1" class="mdl-radio__button" name="options2" value="1">
+                <span class="mdl-radio__label">Yes</span>
+              </label>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                <input type="radio" id="option-2" class="mdl-radio__button" name="options2" value="2" checked>
+                <span class="mdl-radio__label">No</span>
+              </label>
+              <h6>Is your vehicle worth more than ZMW15,000?</h6>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                <input type="radio" id="option-1" class="mdl-radio__button" name="options3" value="1">
+                <span class="mdl-radio__label">Yes</span>
+              </label>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                <input type="radio" id="option-2" class="mdl-radio__button" name="options3" value="2" checked>
+                <span class="mdl-radio__label">No</span>
+              </label>
+              <br><br>
+              <h5>About You</h5>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Fullname...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Email address...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">ID number...</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                <label class="mdl-textfield__label" for="sample4">Mobile number...</label>
                 <span class="mdl-textfield__error">Input is not a number!</span>
               </div>
               <div class="">
@@ -452,26 +496,7 @@
                 <li><a href="#">Updates</a></li>
               </ul>
             </div>
-            <!-- <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Details</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">Spec</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Resources</a></li>
-              </ul>
-            </div> -->
-            <!-- <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Technology</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">Patterns</a></li>
-                <li><a href="#">Usage</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contracts</a></li>
-              </ul>
-            </div> -->
+
             <div class="mdl-mega-footer--drop-down-section">
               <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
               <h1 class="mdl-mega-footer--heading">FAQ</h1>
