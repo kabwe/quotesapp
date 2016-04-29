@@ -321,3 +321,17 @@ select:focus {
   border-top: 0.375em solid rgba(0,0,0, 0.12);
   pointer-events: none;
 }
+
+.dropdown-button {
+  text-transform: capitalize;
+}
+
+.small-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.mid-icon {
+  width: 50px;
+  height: 50px;
+}
