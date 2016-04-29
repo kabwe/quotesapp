@@ -60,7 +60,7 @@
             <li class="drop">Insurance
               <ul>
                 <li><a href="#insurance-motor" class="mdl-layout__tab dropdown-button"> <img class="small-icon" src="images/noun_38672_cc-white.png"> Motor</a></li>
-                <li><a href="#insurance-property" class="mdl-layout__tab dropdown-button"> <img class="small-icon" src="images/noun_25340_cc-white.png"> Home</a></li>
+                <li><a href="#insurance-property" class="mdl-layout__tab dropdown-button"> <img class="small-icon" src="images/noun_25340_cc-white.png"> Property</a></li>
               </ul>
             </li>
             <li class="drop">Finance
@@ -330,7 +330,7 @@
               <br>
 
               <form action="#">
-                <h5>Your Car</h5>
+                <h5>Your Vehicle</h5>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="motor-year">
                   <label class="mdl-textfield__label" for="sample4">Year...</label>
@@ -370,13 +370,20 @@
                 </div>
                 <br><br>
 
-                <h5>More About Your Car</h5>
+                <h5>More About Your Vehicle</h5>
                 <div class="mdl-selectfield">
                   <label>What type of cover do you require...t</label>
                   <select class="browser-default">
                     <option value="" disabled selected>What type of cover do you require...</option>
                     <option value="1">Comprehensive</option>
-                    <option value="2">Third Party</option>
+                    <option value="2">Full Third Party Fire and Theft</option>
+                    <option value="3">Third Party Only</option>
+                    <option value="4">Motor Traders – Internal and External Policies</option>
+                    <option value="5">Goods in Transit</option>
+                    <option value="6">Single Inland Transit</option>
+                    <option value="7">Marine Open Cover</option>
+                    <option value="8">Marine Specific</option>
+                    <option value="9">Craft and Motorboat</option>
                   </select>
                 </div>
                 <br><br>
@@ -413,17 +420,17 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing">
 
             <div class="mdl-cell mdl-cell--12-col" id="motor-tab">
-              <h4> <img class="mid-icon" src="images/noun_25340_cc.png"> Get Home Contents Insurance Quotes.</h4>
+              <h4> <img class="mid-icon" src="images/noun_25340_cc.png"> Get Property Insurance Quotes.</h4>
               <p>
                 Please complete the form.
               </p>
               <br>
 
               <form action="#">
-                <h5>Tell Us About Your Home</h5>
+                <h5>Tell Us About Your Property</h5>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="motor-year">
-                  <label class="mdl-textfield__label" for="sample4">Value of home contents</label>
+                  <label class="mdl-textfield__label" for="sample4">Value of property contents</label>
                   <span class="mdl-textfield__error">Input is not a number!</span>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -442,15 +449,26 @@
                   <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" checked>
                   <span class="mdl-radio__label">No</span>
                 </label>
-                <h5>Do you have an alarm in working order?</h5>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                  <input type="radio" id="option-1" class="mdl-radio__button" name="options2" value="1">
-                  <span class="mdl-radio__label">Yes</span>
-                </label>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                  <input type="radio" id="option-2" class="mdl-radio__button" name="options2" value="2" checked>
-                  <span class="mdl-radio__label">No</span>
-                </label>
+                <br><br>
+
+                <div class="mdl-selectfield">
+                  <label>What type of cover do you require...t</label>
+                  <select class="browser-default">
+                    <option value="" disabled selected>What type of cover do you require...</option>
+                    <option value="1">Fire and Allied Perils</option>
+                    <option value="2">Domestic Buildings</option>
+                    <option value="3">Office Comprehensive</option>
+                    <option value="4">Fire Business Interruption</option>
+                    <option value="5">Domestic Buildings</option>
+                    <option value="6">Domestic Contents</option>
+                    <option value="7">Electronic Equipment All Risks</option>
+                    <option value="8">Contractors All Risks</option>
+                    <option value="9">Plant All Risks</option>
+                    <option value="10">Erection All Risks</option>
+                    <option value="11">Loss of Profits Following Machinery Breakdown</option>
+                    <option value="12">Boiler and Pressure Vessel</option>
+                  </select>
+                </div>
                 <br><br>
 
                 <h5>About You</h5>
