@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html ng-app="quoteApp"  lang="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,16 +35,20 @@
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
+    -->
 
     <link rel="stylesheet" href="mdl/material.min.css">
 
     <!-- Material Design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    
+    <script src="http://projects.mutalecharles.com/cruiter/assets/js/angular.min.js"></script>
+    <script src="http://projects.mutalecharles.com/cruiter/assets/js/jquery.min.js"></script>
+    <script src="scripts/main-controller.js"></script>
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+  <body ng-controller="quoterequest" class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 <!--
       Header & Navigation Section
@@ -106,14 +110,14 @@
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Loans</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#loans">proident minim</a>.
+                  We offer competitive rates for our customers, save you time and hassle. Our Quotations systems offers independent and unbiased results to suit our customers. <a href="#loans">proident minim</a>.
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                   <div class="section__circle-container__circle mdl-color--primary"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Insurance</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#insurance">proident minim</a>.
+                  Our online insurance quotation system will instantly compare quotas from a range of different insurance brands in Zambia. Our customers are will enjoy low prices and benefits to make it easy for you to make a decision on the right quota that fits your needs. <a href="#insurance">proident minim</a>.
                 </div>
               </div>
             </div>
@@ -288,7 +292,26 @@
         </div>
 <!--
         Motor Insurance Tab
-        ******************* -->
+        *******************
+	vehicle_year : "",
+			vehicle_make : "",
+			vehicle_model: "",
+			vehicle_description: "",
+			driver_type: "",
+			fullname: "",
+			email: "",
+			id: "",
+			mobile: "",
+            license_type: ""
+
+
+
+
+
+
+
+
+		-->
         <div class="mdl-layout__tab-panel" id="insurance-motor">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col" id="motor-tab">
@@ -302,20 +325,20 @@
               <form action="#">
                 <h5>Your Vehicle</h5>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="motor-year">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="request_quote.vehicle_year" id="motor-year">
                     <label class="mdl-textfield__label" for="sample4">Year...</label>
                     <span class="mdl-textfield__error">Input is not a number!</span>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="motor-make">
+                    <input class="mdl-textfield__input" type="text" ng-model="request_quote.vehicle_make" id="motor-make">
                     <label class="mdl-textfield__label" for="sample3">Make...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="motor-model">
+                    <input class="mdl-textfield__input" type="text" ng-model="request_quote.vehicle_model" id="motor-model">
                     <label class="mdl-textfield__label" for="sample3">Model...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="motor-description">
+                    <input class="mdl-textfield__input" type="text" id="motor-description" ng-model="request_quote.vehicle_description">
                     <label class="mdl-textfield__label" for="sample3">Description...</label>
                   </div>
                 <br><br>
@@ -332,7 +355,7 @@
                   <br><br>
                   <div class="mdl-selectfield">
                     <label>Type of license...</label>
-                    <select class="browser-default">
+                    <select  ng-model="request_quote.license_type" class="browser-default">
                       <option value="" disabled selected>Type of license...</option>
                       <option value="1">ZM license</option>
                       <option value="2">International licence</option>
@@ -343,7 +366,7 @@
                 <h5>More About Your Vehicle</h5>
                   <div class="mdl-selectfield">
                     <label>What type of cover do you require...t</label>
-                    <select class="browser-default">
+                    <select ng-model="request_quote.cover_type"  class="browser-default">
                       <option value="" disabled selected>What type of cover do you require...</option>
                       <option value="1">Comprehensive</option>
                       <option value="2">Full Third Party Fire and Theft</option>
@@ -360,24 +383,24 @@
 
                 <h5>About You</h5>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input class="mdl-textfield__input" type="text"  ng-model="request_quote.fullname"  id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Fullname...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input class="mdl-textfield__input" type="text"  ng-model="request_quote.email"  id="sample3">
                     <label class="mdl-textfield__label" for="sample3">Email address...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input class="mdl-textfield__input" type="text"  ng-model="request_quote.id"  id="sample3">
                     <label class="mdl-textfield__label" for="sample3">ID number...</label>
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                    <input class="mdl-textfield__input" type="text"  ng-model="request_quote.mobile"  pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
                     <label class="mdl-textfield__label" for="sample4">Mobile number...</label>
                     <span class="mdl-textfield__error">Input is not a number!</span>
                   </div>
                 <div class="">
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submit-margin">
+                  <button ng-click="postRequest(request_quote)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent submit-margin">
                     Submit
                   </button>
                 </div>
